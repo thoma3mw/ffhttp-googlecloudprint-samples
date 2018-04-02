@@ -112,7 +112,7 @@ public with sharing class GoogleCloudPrintAccountController
     {
     	if (client == null)
     	{
-    		ffhttp_Client.Credentials credentials = new ffhttp_Client.Credentials(connectorService.connector.TokenType__c, connectorService.connector.AccessToken__c);
+    		ffhttp_Client.AccessTokenCredentials credentials = new ffhttp_Client.AccessTokenCredentials(connectorService.connector.TokenType__c, connectorService.connector.AccessToken__c);
     		client = new ffhttp_GoogleCloudPrint(credentials);
     	}
     	return client;
