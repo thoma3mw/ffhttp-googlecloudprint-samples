@@ -286,7 +286,7 @@ public with sharing class GoogleCloudPrintTestController
     	String tokenType = connectorService.connector.TokenType__c;
     	String accessToken = connectorService.connector.AccessToken__c;
     	
-        ffhttp_Client.Credentials credentials = new ffhttp_Client.Credentials(tokenType, accessToken);
+        ffhttp_Client.AccessTokenCredentials credentials = new ffhttp_Client.AccessTokenCredentials(tokenType, accessToken);
         return new ffhttp_GoogleCloudPrint(credentials);
   	}
   	
